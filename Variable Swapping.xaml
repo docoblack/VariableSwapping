@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="VariableSwappingWithNewVariable" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="791.2,1874.4" sap2010:WorkflowViewState.IdRef="VariableSwapping_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="VariableSwappingWithNewVariable" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="694,2021" sap2010:WorkflowViewState.IdRef="VariableSwapping_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -52,9 +52,10 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence - 'This code is for swapping two numbers by using a third variable'" sap:VirtualizedContainerService.HintSize="417.6,1809.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence - 'This code is for swapping two numbers by using a third variable'" sap:VirtualizedContainerService.HintSize="512,1956" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="First_Input_Value" />
       <Variable x:TypeArguments="x:Int32" Name="Second_Input_Value" />
@@ -65,8 +66,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="376,75.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//Taking input of two numbers from user and swap them by using a third variable." />
-    <Sequence sap2010:Annotation.AnnotationText="This code is for swapping two numbers by using a third variable." DisplayName="Sequence - 'For prompting user to give input'" sap:VirtualizedContainerService.HintSize="376,748" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="450,75" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//Taking input of two numbers from user and swap them by using a third variable." />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Random Message&quot;]" />
+    <Sequence sap2010:Annotation.AnnotationText="This code is for swapping two numbers by using a third variable." DisplayName="Sequence - 'For prompting user to give input'" sap:VirtualizedContainerService.HintSize="450,744" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -74,7 +76,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Taking User input and storing the value in &quot;First_Input_Value&quot;" DisplayName="Input Dialog - 'First numeric input by User'" sap:VirtualizedContainerService.HintSize="333.6,285.6" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please enter the first numeric value: " Title="First Value">
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Taking User input and storing the value in &quot;First_Input_Value&quot;" DisplayName="Input Dialog - 'First numeric input by User'" sap:VirtualizedContainerService.HintSize="388,281" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please enter the first numeric value: " Title="First Value">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:Int32">[First_Input_Value]</OutArgument>
         </ui:InputDialog.Result>
@@ -84,7 +86,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InputDialog>
-      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Taking User input and storing the value in &quot;Second_Input_Value&quot;" DisplayName="Input Dialog - 'Second numeric input by User'" sap:VirtualizedContainerService.HintSize="333.6,285.6" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Enter the second numeric value: " Title="Second Value">
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Taking User input and storing the value in &quot;Second_Input_Value&quot;" DisplayName="Input Dialog - 'Second numeric input by User'" sap:VirtualizedContainerService.HintSize="388,281" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Enter the second numeric value: " Title="Second Value">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:Int32">[Second_Input_Value]</OutArgument>
         </ui:InputDialog.Result>
